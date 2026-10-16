@@ -3,41 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operação Raccoon Kitty 🎀🧟‍♂️ • Sabrina & Rafael</title>
+  <title>Sabrina • Neuroanatomia & Neurofisiologia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Press+Start+2P&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            pixel: ['"Press Start 2P"', 'monospace'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Outfit"', 'sans-serif']
+            serif: ['"Playfair Display"', 'serif']
           },
           colors: {
-            sanrio: {
-              pink: '#FF69B4',
-              softPink: '#FFD1DC',
-              purple: '#9B51E0',
-              kuromi: '#2B163B',
-              kittyRed: '#FF2A4D'
-            },
-            re: {
-              dark: '#0A0C10',
-              card: '#121720',
-              border: '#1F2937',
-              green: '#10B981',
-              herb: '#059669',
-              amber: '#F59E0B',
-              danger: '#EF4444',
-              blue: '#0284C7'
+            roseSoft: {
+              50: '#FFF5F7',
+              100: '#FFE4E9',
+              200: '#FFCCD6',
+              300: '#FFA3B5',
+              400: '#FF6B8B',
+              500: '#F43F6E',
+              600: '#E11D5A',
+              700: '#BE1248',
+              800: '#9F123F',
+              900: '#4C0519'
             }
           }
         }
@@ -46,231 +39,197 @@
   </script>
 
   <style>
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.08); opacity: 1; }
+    body {
+      background: linear-gradient(180deg, #FFF5F7 0%, #FFEBF0 50%, #FFF5F7 100%);
+      color: #331A24;
     }
-    .animate-heartbeat {
-      animation: heartbeat 1.2s infinite ease-in-out;
-    }
-    .scanline {
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-      background-size: 100% 3px, 6px 100%;
-      pointer-events: none;
-    }
-    .pixel-border {
-      box-shadow: 0 0 0 3px #1f2937, 0 0 0 6px #ff69b4;
-    }
-    .custom-scroll::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scroll::-webkit-scrollbar-track {
-      background: #111827;
-    }
-    .custom-scroll::-webkit-scrollbar-thumb {
-      background: #ff69b4;
-      border-radius: 9999px;
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(244, 63, 110, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
     }
   </style>
 </head>
-<body class="bg-[#0A0C10] text-slate-100 min-h-screen font-sans selection:bg-pink-500 selection:text-white relative pb-16">
+<body class="min-h-screen font-sans selection:bg-roseSoft-400 selection:text-white pb-20">
 
-  <!-- HUD Top Bar -->
-  <header class="sticky top-0 z-40 bg-[#0E131B]/95 backdrop-blur-md border-b border-pink-500/20 px-4 py-3 shadow-lg shadow-pink-500/5">
+  <!-- CABEÇALHO -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-roseSoft-200 px-4 py-3.5 shadow-sm">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-600 to-purple-600 flex items-center justify-center text-white shadow-md shadow-pink-500/30 font-pixel text-xs">
-          🎀
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-2xl bg-roseSoft-100 border border-roseSoft-300 flex items-center justify-center text-roseSoft-600 shadow-sm font-serif text-lg font-bold">
+          S
         </div>
         <div>
-          <div class="flex items-center gap-2">
-            <span class="text-xs font-pixel text-pink-400 tracking-wider">RACCOON KITTY</span>
-            <span class="text-[10px] bg-sky-950 border border-sky-500/40 text-sky-300 px-2 py-0.5 rounded-full font-bold">R.P.D. SURVIVAL</span>
-          </div>
-          <h1 class="text-sm md:text-base font-bold font-display text-slate-100 flex items-center gap-1.5">
-            Sabrina <span class="text-pink-400">♥</span> Neuroanatomia
+          <span class="text-[11px] font-bold uppercase tracking-wider text-roseSoft-500 block">Psicologia & Estudos</span>
+          <h1 class="text-sm md:text-base font-bold text-slate-800 leading-tight">
+            Neuroanatomia & Neurofisiologia
           </h1>
         </div>
       </div>
 
-      <!-- Vital Health Monitor (Resident Evil Style) -->
-      <div class="flex items-center gap-3">
-        <div class="hidden sm:flex flex-col items-end">
-          <div class="flex items-center gap-1.5 text-xs font-pixel" id="conditionText">
-            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-            <span class="text-emerald-400 font-bold" id="statusCondition">FINE</span>
-          </div>
-          <span class="text-[10px] text-slate-400 font-medium">Meta: 80% (12/15)</span>
-        </div>
-
-        <button id="btnSoundToggle" class="w-9 h-9 rounded-lg bg-slate-800/80 border border-slate-700 hover:border-pink-500 text-slate-300 hover:text-pink-400 flex items-center justify-center text-sm transition-all" title="Ligar/Desligar Efeitos Sonoros">
-          <i class="fa-solid fa-volume-high" id="soundIcon"></i>
-        </button>
-      </div>
+      <!-- BOTAO DE RECADO DO RAFA -->
+      <button id="btnOpenNote" class="px-3.5 py-2 rounded-2xl bg-roseSoft-50 hover:bg-roseSoft-100 text-roseSoft-700 border border-roseSoft-300 text-xs md:text-sm font-semibold flex items-center space-x-2 transition-all shadow-sm">
+        <i class="fa-solid fa-heart text-roseSoft-500"></i>
+        <span>Recadinho do Rafa</span>
+      </button>
     </div>
   </header>
 
-  <!-- Main Container -->
+  <!-- CONTAINER PRINCIPAL -->
   <main class="max-w-3xl mx-auto px-4 pt-6">
 
-    <!-- Hero Card with Sanrio Characters Banner -->
-    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#181F2C] to-[#0F141D] border border-pink-500/30 shadow-2xl p-4 md:p-6 mb-6">
-      <div class="relative z-10 flex flex-col md:flex-row items-center gap-5">
-        <div class="w-full md:w-5/12 overflow-hidden rounded-xl border-2 border-pink-400/30 shadow-inner group relative">
-          <img src="sanrio.png" alt="Sanrio Gang Hello Kitty" class="w-full h-44 object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-2.5">
-            <span class="text-[11px] font-pixel text-pink-300 bg-black/60 px-2 py-1 rounded backdrop-blur-sm">
-              LEON & SANRIO GANG
-            </span>
-          </div>
+    <!-- BANNER DE APRESENTAÇÃO -->
+    <div class="relative overflow-hidden rounded-3xl bg-white border border-roseSoft-200 p-5 md:p-7 mb-6 card-shadow">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        
+        <!-- Imagem dos bonequinhos da Sanrio -->
+        <div class="w-full md:w-5/12 overflow-hidden rounded-2xl border border-roseSoft-200 shadow-sm shrink-0">
+          <img src="sanrio.png" alt="Personagens Sanrio" class="w-full h-44 object-cover object-center">
         </div>
 
-        <div class="w-full md:w-7/12 text-center md:text-left space-y-2">
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-semibold">
-            <span>✨</span> Missão Tática para o Meu Anjinho
+        <div class="w-full md:w-7/12 space-y-2.5 text-left">
+          <div class="inline-flex items-center space-x-2 bg-roseSoft-100/80 border border-roseSoft-200 px-3 py-1 rounded-full text-xs font-semibold text-roseSoft-700">
+            <i class="fa-solid fa-heart text-roseSoft-500 text-[10px]"></i>
+            <span>Feito com carinho para a Sabrina</span>
           </div>
-          <h2 class="text-xl md:text-2xl font-black font-display text-white tracking-tight">
-            Treino Especial: <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-300 to-sky-400">Neuroanatomia & Fisiologia</span>
+
+          <h2 class="text-xl md:text-2xl font-bold font-serif text-slate-900 leading-snug">
+            Oi Sabrina! Vamos revisar para a prova?
           </h2>
-          <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
-            Preparado com todo o amor do mundo pelo seu <strong class="text-pink-400">Rafita</strong>! São 15 questões essenciais para você gabaritar sua prova de Psicologia. Acertando <strong>80% (12 questões)</strong>, você desbloqueia o <strong>Arquivo Confidencial R.P.D.</strong> cheio de mimos e carinho! 💌
+
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+            Montei esse simulado com as 15 questões fundamentais de neuroanatomia e neurofisiologia para te ajudar nos estudos de psicologia. Você pode treinar no seu tempo, no celular ou no computador. Se bater dúvida em alguma pergunta, deixei um botão de ajuda com dicas especiais para você.
           </p>
 
-          <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1 text-xs">
-            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-pink-300 font-medium">
-              🎀 Anjinho
-            </span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-sky-300 font-medium">
-              👀 Zoiuda
-            </span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-amber-300 font-medium">
-              👑 Minha Princesa
-            </span>
-            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 border border-slate-700 text-emerald-300 font-medium">
-              🧟‍♂️ Estilo Leon S. Kennedy
-            </span>
-          </div>
+          <p class="text-xs text-roseSoft-700 font-medium">
+            Meta: acertar 80% (12 questões) para liberar uma mensagem especial no final.
+          </p>
         </div>
       </div>
 
-      <!-- Tactical Progress Ribbon -->
-      <div class="mt-5 pt-4 border-t border-slate-800 flex flex-col gap-2">
-        <div class="flex justify-between items-center text-xs font-bold text-slate-400">
-          <span class="flex items-center gap-1.5 font-pixel text-[11px] text-pink-400">
-            <i class="fa-solid fa-gamepad"></i> PROGRESSO DA MISSÃO
-          </span>
-          <span id="progressStats" class="text-slate-300">Questão <span class="text-pink-400 font-bold" id="currentQNum">1</span> de 15</span>
+      <!-- Barra de Progresso das Questões -->
+      <div class="mt-6 pt-4 border-t border-roseSoft-100 flex flex-col gap-1.5">
+        <div class="flex justify-between items-center text-xs font-medium text-slate-500">
+          <span>Progresso do simulado</span>
+          <span class="text-roseSoft-700 font-semibold" id="progressText">Questão 1 de 15</span>
         </div>
-        <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700">
-          <div id="progressBar" class="bg-gradient-to-r from-pink-500 via-purple-500 to-sky-400 h-full rounded-full transition-all duration-300 w-[6.6%]"></div>
+        <div class="w-full bg-roseSoft-100 h-2.5 rounded-full overflow-hidden">
+          <div id="progressBar" class="bg-roseSoft-500 h-full rounded-full transition-all duration-300 w-[6.6%]"></div>
         </div>
       </div>
     </div>
 
-    <!-- Active Question Card -->
-    <div id="quizContainer" class="bg-[#111722] border border-slate-800 rounded-2xl p-5 md:p-8 shadow-xl relative">
+    <!-- CARD DA QUESTÃO ATUAL -->
+    <div id="quizContainer" class="bg-white border border-roseSoft-200 rounded-3xl p-5 md:p-8 card-shadow relative">
       
-      <!-- Top Question Meta -->
-      <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800/80 text-xs">
-        <span id="questionCategory" class="px-3 py-1 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-bold font-pixel text-[10px]">
+      <!-- Topo da Questão -->
+      <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-roseSoft-100 text-xs">
+        <span id="questionTopic" class="px-3 py-1 rounded-full bg-roseSoft-100 text-roseSoft-700 font-bold uppercase tracking-wider text-[10px]">
           NEUROFISIOLOGIA
         </span>
-        <div class="flex items-center gap-2 text-slate-400">
-          <i class="fa-solid fa-shield-heart text-pink-400"></i>
-          <span>Acertos: <strong id="scoreCount" class="text-emerald-400">0</strong>/15</span>
+
+        <div class="flex items-center space-x-3 text-slate-500">
+          <button id="btnQuestionHint" class="text-roseSoft-600 hover:text-roseSoft-700 font-semibold flex items-center space-x-1.5 transition-colors">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i>
+            <span>Dica do Rafa</span>
+          </button>
+          <span>Acertos: <strong id="scoreCounter" class="text-roseSoft-700 font-bold">0</strong>/15</span>
         </div>
       </div>
 
-      <!-- Question Title -->
-      <h3 id="questionText" class="text-base md:text-xl font-bold font-display text-white mb-6 leading-relaxed">
-        Carregando questão...
-      </h3>
-
-      <!-- Options Container -->
-      <div id="optionsContainer" class="space-y-3 mb-6">
-        <!-- Buttons rendered dynamically -->
-      </div>
-
-      <!-- Feedback Banner (Hidden by default) -->
-      <div id="feedbackBox" class="hidden rounded-xl p-4 mb-5 border transition-all animate-fade-in">
-        <div class="flex items-start gap-3">
-          <div id="feedbackIcon" class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 mt-0.5"></div>
+      <!-- Caixa da Dica (Oculta por padrão) -->
+      <div id="hintBox" class="hidden rounded-2xl p-4 mb-5 bg-amber-50/80 border border-amber-200 text-amber-900 text-xs md:text-sm leading-relaxed">
+        <div class="flex items-start space-x-2.5">
+          <i class="fa-solid fa-heart text-roseSoft-500 mt-0.5 shrink-0"></i>
           <div>
-            <h4 id="feedbackTitle" class="font-bold text-sm mb-1"></h4>
-            <p id="feedbackText" class="text-xs md:text-sm text-slate-300 leading-relaxed"></p>
+            <strong class="font-bold text-amber-950 block mb-0.5">Dica carinhosa:</strong>
+            <span id="hintContent"></span>
           </div>
         </div>
       </div>
 
-      <!-- Action Footer -->
+      <!-- Enunciado da Pergunta -->
+      <h3 id="questionText" class="text-base md:text-lg font-bold text-slate-800 mb-6 leading-relaxed">
+        Carregando pergunta...
+      </h3>
+
+      <!-- Alternativas -->
+      <div id="optionsContainer" class="space-y-3 mb-6">
+        <!-- Renderizado dinamicamente -->
+      </div>
+
+      <!-- Caixa de Feedback da Resposta -->
+      <div id="feedbackBox" class="hidden rounded-2xl p-4 mb-5 border transition-all">
+        <div class="flex items-start space-x-3">
+          <div id="feedbackIcon" class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5"></div>
+          <div>
+            <h4 id="feedbackTitle" class="font-bold text-sm mb-1"></h4>
+            <p id="feedbackText" class="text-xs md:text-sm leading-relaxed"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rodapé da Ação -->
       <div class="flex items-center justify-between pt-2">
-        <span class="text-xs text-slate-500 italic">
-          💡 Clique na alternativa para responder
+        <span class="text-xs text-slate-400">
+          Selecione a resposta correta
         </span>
-        <button id="btnNext" disabled class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-500 font-bold text-sm flex items-center gap-2 transition-all cursor-not-allowed">
+        <button id="btnNext" disabled class="px-6 py-2.5 rounded-2xl bg-slate-200 text-slate-400 font-bold text-sm flex items-center space-x-2 transition-all cursor-not-allowed">
           <span>Próxima</span>
-          <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
         </button>
       </div>
 
     </div>
 
-    <!-- Final Results Screen (Hidden initially) -->
-    <div id="resultsScreen" class="hidden bg-[#111722] border-2 border-pink-500/40 rounded-2xl p-6 md:p-8 shadow-2xl relative text-center">
+    <!-- TELA FINAL DE RESULTADO -->
+    <div id="resultsScreen" class="hidden bg-white border border-roseSoft-200 rounded-3xl p-6 md:p-8 card-shadow text-center">
       
-      <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-pink-500 via-purple-600 to-sky-500 p-1 shadow-lg shadow-pink-500/30 flex items-center justify-center text-4xl animate-heartbeat" id="resultBadge">
-        🏆
+      <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-roseSoft-100 text-roseSoft-600 flex items-center justify-center text-2xl shadow-inner">
+        <i class="fa-solid fa-award"></i>
       </div>
 
-      <span id="rankBadge" class="inline-block px-4 py-1 rounded-full font-pixel text-xs font-bold tracking-widest uppercase mb-3 bg-emerald-950 border border-emerald-500 text-emerald-300">
-        RANK S • SOBREVIVENTE DE ELITE
+      <span id="resultBadge" class="inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-2 bg-roseSoft-100 text-roseSoft-700">
+        Resultado do Simulado
       </span>
 
-      <h2 class="text-2xl md:text-3xl font-black font-display text-white mb-2" id="resultTitle">
-        Você é Incrível, Meu Amor!
+      <h2 class="text-2xl font-bold font-serif text-slate-900 mb-1" id="resultTitle">
+        Simulado Concluído!
       </h2>
 
-      <p class="text-sm md:text-base text-slate-300 max-w-lg mx-auto mb-6" id="resultSubtitle">
-        Você acertou <span class="text-pink-400 font-bold" id="finalScore">14</span> de 15 questões (<span class="text-emerald-400 font-bold" id="finalPct">93%</span>).
+      <p class="text-xs md:text-sm text-slate-600 mb-6" id="resultSubtitle">
+        Você acertou <span class="text-roseSoft-600 font-bold" id="finalScore">0</span> de 15 questões (<span class="text-roseSoft-600 font-bold" id="finalPercentage">0%</span>).
       </p>
 
-      <!-- Secret Love Letter Box (Unlocked on 80%+) -->
-      <div id="secretLetterBox" class="text-left bg-gradient-to-b from-[#1C1528] to-[#120F1A] border-2 border-pink-400/60 rounded-xl p-5 md:p-6 mb-6 shadow-xl relative overflow-hidden">
-        <div class="absolute -right-4 -bottom-4 text-7xl text-pink-500/10 pointer-events-none select-none">
-          🎀
+      <!-- Carta Especial do Rafael -->
+      <div id="letterBox" class="text-left bg-roseSoft-50 border border-roseSoft-200 rounded-2xl p-5 md:p-7 mb-6">
+        <div class="flex items-center space-x-2 mb-3 text-roseSoft-600 text-xs font-bold">
+          <i class="fa-solid fa-envelope-open-heart"></i>
+          <span>De: Rafael • Para: Sabrina</span>
         </div>
-        <div class="flex items-center gap-2.5 mb-3 pb-2 border-b border-pink-500/20 text-pink-400 font-pixel text-xs">
-          <span>💌 ARQUIVO CONFIDENCIAL: DO RAFITA PARA A SABRINA</span>
-        </div>
-        <div class="space-y-3 text-xs md:text-sm text-slate-200 leading-relaxed">
+        <div class="space-y-3 text-xs md:text-sm text-slate-700 leading-relaxed font-normal">
           <p>
-            Oi, meu <strong class="text-pink-400">anjinho</strong> mais lindo desse universo... Minha <strong class="text-sky-300">zoiuda</strong> favorita, minha <strong class="text-amber-300">garotinha</strong> e minha <strong class="text-pink-300">princesa</strong>! ❤️
+            Oi, <strong class="text-roseSoft-700 font-semibold">momo</strong>... Passando aqui para te dar os parabéns pela dedicação!
           </p>
           <p>
-            Eu sei o quanto a faculdade de Psicologia exige de você e como Neuroanatomia e Neurofisiologia têm nomes complicados, vias neurais infinitas e muito conteúdo puxado. Mas olha para esse resultado aqui: <strong>você destruiu nesse simulado!</strong>
+            Eu sei o quanto você se esforça para dar conta de tudo e como essa matéria de neuroanatomia e neurofisiologia tem detalhes, nomes e processos difíceis. Mas você mostrou que tem total capacidade de dominar esse conteúdo, <strong class="text-roseSoft-700 font-semibold">minha garotinha</strong>.
           </p>
           <p>
-            Você tem a mente mais brilhante e dedicada que eu já vi. Se o <strong>Leon S. Kennedy</strong> enfrentou Raccoon City inteira com coragem, você encara qualquer prova com esse sorriso maravilhoso e essa doçura de Hello Kitty que me deixa completamente bobo por você.
+            Assim como o Leon enfrenta qualquer desafio em Resident Evil sem recuar, você encara os estudos com essa determinação linda e esse jeitinho doce que eu amo tanto. Você é muito inteligente, <strong class="text-roseSoft-700 font-semibold">meu anjinho</strong>, e eu tenho um orgulho imenso de você.
           </p>
           <p>
-            Confia no seu potencial, minha garotinha. Essa prova já é sua! Domingo tem comemoração e muitos beijinhos do seu fã número 1. Te amo demais, anjinho! 💖
+            Vai tranquila para a prova, respira fundo e confia no que você sabe. No final de semana a gente comemora juntos!
           </p>
-          <div class="pt-3 border-t border-pink-500/20 flex flex-wrap items-center justify-between text-xs text-pink-400 font-semibold">
-            <span>— Com todo o amor do seu Rafita ☕🎸</span>
-            <span>Aprovado por: Agente Leon S. Kennedy 🔫🎀</span>
+          <div class="pt-3 border-t border-roseSoft-200 text-xs text-roseSoft-600 font-semibold flex justify-between items-center">
+            <span>Com todo o carinho do seu Rafa ❤️</span>
+            <span>Psicologia &bull; Nota 10</span>
           </div>
         </div>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <button id="btnRestart" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold text-sm shadow-lg shadow-pink-500/25 transition-all flex items-center justify-center gap-2">
-          <i class="fa-solid fa-rotate-left"></i>
-          <span>Refazer Treino</span>
-        </button>
-        <button id="btnReviewQuestions" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm border border-slate-700 transition-all flex items-center justify-center gap-2">
-          <i class="fa-solid fa-book-open"></i>
-          <span>Revisar Conceitos</span>
+      <!-- Botão para refazer -->
+      <div class="flex items-center justify-center">
+        <button id="btnRestart" class="px-6 py-3 rounded-2xl bg-roseSoft-600 hover:bg-roseSoft-700 text-white font-bold text-sm shadow-md transition-all flex items-center space-x-2">
+          <i class="fa-solid fa-rotate-left text-xs"></i>
+          <span>Refazer Simulado</span>
         </button>
       </div>
 
@@ -278,83 +237,82 @@
 
   </main>
 
+  <!-- MODAL: RECADINHO DO RAFA -->
+  <div id="noteModal" class="hidden fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 md:p-8 max-w-md w-full relative card-shadow border border-roseSoft-200">
+      
+      <button id="btnCloseNote" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-roseSoft-50 hover:bg-roseSoft-100 text-roseSoft-600 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark text-xs"></i>
+      </button>
+
+      <div class="text-center mb-4">
+        <div class="w-12 h-12 rounded-full bg-roseSoft-100 text-roseSoft-600 flex items-center justify-center mx-auto mb-2 text-xl">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <h3 class="text-lg font-bold font-serif text-slate-800">
+          De: Rafael &bull; Para: Sabrina
+        </h3>
+        <p class="text-xs text-roseSoft-600 font-medium mt-0.5">
+          Um recadinho para te dar força nos estudos
+        </p>
+      </div>
+
+      <div class="bg-roseSoft-50 p-5 rounded-2xl border border-roseSoft-200 mb-5 text-left">
+        <p id="noteContent" class="text-slate-700 text-xs md:text-sm leading-relaxed whitespace-pre-line">
+          Carregando recadinho...
+        </p>
+        <div class="mt-3 pt-2.5 border-t border-roseSoft-200 text-[11px] text-roseSoft-600 font-semibold flex justify-between items-center">
+          <span id="noteAuthor">Rafa ❤️</span>
+          <span class="text-slate-400">Neuro & Psicologia</span>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <button id="btnNextNote" class="text-xs text-roseSoft-600 hover:text-roseSoft-700 font-bold flex items-center space-x-1.5 transition-colors">
+          <i class="fa-solid fa-arrows-rotate text-[11px]"></i>
+          <span>Ver outro recado</span>
+        </button>
+
+        <button id="btnConfirmNote" class="px-5 py-2 rounded-2xl bg-roseSoft-600 hover:bg-roseSoft-700 text-white text-xs font-bold shadow-sm transition-all">
+          Continuar estudando
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <script>
-    // Audio synthesizer with Web Audio API (zero external dependency)
-    class SoundFX {
-      constructor() {
-        this.ctx = null;
-        this.enabled = true;
-      }
-      init() {
-        if (!this.ctx) {
-          const AudioContext = window.AudioContext || window.webkitAudioContext;
-          this.ctx = new AudioContext();
-        }
-      }
-      playTone(freq, type, duration, gainVal = 0.1) {
-        if (!this.enabled) return;
-        this.init();
-        try {
-          const osc = this.ctx.createOscillator();
-          const gain = this.ctx.createGain();
-          osc.type = type;
-          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
-          gain.gain.setValueAtTime(gainVal, this.ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
-          osc.connect(gain);
-          gain.connect(this.ctx.destination);
-          osc.start();
-          osc.stop(this.ctx.currentTime + duration);
-        } catch(e) {}
-      }
-      click() { this.playTone(600, 'sine', 0.08, 0.08); }
-      correct() {
-        this.playTone(523.25, 'triangle', 0.12, 0.15); // C5
-        setTimeout(() => this.playTone(659.25, 'triangle', 0.12, 0.15), 100); // E5
-        setTimeout(() => this.playTone(783.99, 'triangle', 0.25, 0.15), 200); // G5
-      }
-      wrong() {
-        this.playTone(260, 'sawtooth', 0.18, 0.15);
-        setTimeout(() => this.playTone(220, 'sawtooth', 0.25, 0.15), 150);
-      }
-      victory() {
-        [523, 659, 783, 1046].forEach((f, idx) => {
-          setTimeout(() => this.playTone(f, 'sine', 0.3, 0.2), idx * 140);
-        });
-      }
-    }
-
-    const sfx = new SoundFX();
-
-    // 15 Academic Neuroanatomy and Neurophysiology Questions
+    // 15 Questões com conteúdo acadêmico sério e dicas afetuosas do Rafael
     const questions = [
       {
-        category: "POTENCIAL DE AÇÃO",
-        question: "Durante a fase de despolarização rápida do potencial de ação neuronal, o evento eletrofisiológico determinante é:",
+        topic: "Potencial de Ação",
+        question: "Durante a despolarização do potencial de ação neuronal, o evento eletrofisiológico determinante é:",
         options: [
-          "O efluxo maciço de íons Potássio (K⁺) pelos canais lentos.",
+          "O efluxo rápido de íons Potássio (K⁺) pelos canais lentos.",
           "O influxo rápido de íons Sódio (Na⁺) através de canais dependentes de voltagem.",
-          "O bloqueio total da bomba de Sódio e Potássio (Na⁺/K⁺ ATPase).",
+          "O bloqueio completo da bomba de Sódio e Potássio (Na⁺/K⁺ ATPase).",
           "A entrada de íons Cloreto (Cl⁻) gerando hiperpolarização somática."
         ],
         correct: 1,
-        explanation: "Na despolarização, o estímulo atinge o limiar e abre os canais de Na⁺ voltagem-dependentes, permitindo a entrada massiva de sódio no citoplasma e invertendo a polaridade da membrana (ficando positiva por dentro)."
+        hint: "Lembra momo: quando o estímulo atinge o limiar, as comportas de sódio se abrem e o Na⁺ entra com tudo no neurônio, deixando o interior positivo!",
+        explanation: "Na despolarização, canais de Na⁺ voltagem-dependentes se abrem rapidamente. A entrada massiva de sódio inverte a polaridade da membrana plasmática."
       },
       {
-        category: "NEUROTRANSMISSORES",
-        question: "Qual é o principal neurotransmissor inibitório do Sistema Nervoso Central e qual é o seu mecanismo básico de ação pós-sináptica?",
+        topic: "Neurotransmissores",
+        question: "Qual é o principal neurotransmissor inibitório do Sistema Nervoso Central e qual o seu mecanismo básico de ação?",
         options: [
           "Glutamato; promove a entrada de Cálcio (Ca²⁺) via receptores NMDA.",
-          "GABA (Ácido Gama-Aminobutírico); promove hiperpolarização da membrana (geralmente por influxo de Cl⁻).",
-          "Dopamina; ativa receptores adrenérgicos excitatórios de ação rápida.",
-          "Acetilcolina; degrada a bainha de mielina nos axônios motores."
+          "GABA (Ácido Gama-Aminobutírico); promove hiperpolarização da membrana pós-sináptica.",
+          "Dopamina; ativa exclusivamente receptores adrenérgicos excitatórios.",
+          "Acetilcolina; degrada a membrana celular nos axônios motores."
         ],
         correct: 1,
-        explanation: "O GABA é o principal inibidor do SNC. Quando se liga a receptores como o GABAA, permite a entrada de íons Cloreto (Cl⁻), hiperpolarizando a célula e tornando o disparo de potenciais de ação muito mais difícil (efeito calmante/ansiolítico)."
+        hint: "Pensa assim, meu anjinho: enquanto o glutamato acelera, o GABA é o freio do cérebro, acalmando os disparos dos neurônios.",
+        explanation: "O GABA atua principalmente abrindo canais de Cloreto (Cl⁻), hiperpolarizando a célula pós-sináptica e dificultando a deflagração de novos potenciais de ação."
       },
       {
-        category: "SISTEMA LÍMBICO & EMOÇÃO",
-        question: "Diante de um perigo súbito (como zumbis de Resident Evil!), qual estrutura do sistema límbico atua como centro primário de processamento do medo e ativação de respostas autonômicas de sobrevivência?",
+        topic: "Sistema Límbico",
+        question: "Diante de um estímulo avaliado como perigo ou ameaça iminente, qual estrutura límbica atua no processamento primário do medo e na ativação autonômica de defesa?",
         options: [
           "Amígdala (complexo amigdalóide).",
           "Corpo Caloso.",
@@ -362,35 +320,38 @@
           "Núcleo Caudado."
         ],
         correct: 0,
-        explanation: "A amígdala é o coração do circuito emocional do medo e alerta. Ela avalia ameaças e envia comandos imediatos ao hipotálamo para disparar adrenalina e preparar o corpo para lutar ou fugir!"
+        hint: "Igualzinho quando o Leon ouve barulho no escuro em Resident Evil, momo! É essa estrutura que ativa o alerta do medo no cérebro.",
+        explanation: "A amígdala é a estrutura central no reconhecimento de ameaças e condicionamento do medo, enviando projeções diretas para o hipotálamo disparar reações de defesa."
       },
       {
-        category: "MEMÓRIA & APRENDIZADO",
-        question: "A consolidação da memória declarativa (episódica e semântica) e o fenômeno de Potenciação de Longo Prazo (LTP) dependem criticamente de qual estrutura do lobo temporal medial?",
+        topic: "Memória",
+        question: "A consolidação da memória declarativa (episódica e semântica) depende fundamentalmente de qual estrutura do lobo temporal medial?",
         options: [
           "Hipocampo.",
           "Bulbo Raquidiano.",
           "Substância Negra.",
-          "Fissura Silviana."
+          "Fissura Calcarina."
         ],
         correct: 0,
-        explanation: "O hipocampo é fundamental para fixar novas memórias declarativas. Lesões bilaterais nele causam amnésia anterógrada (incapacidade de formar memórias novas, como no clássico caso do paciente H.M.)."
+        hint: "É aquela estrutura em formato de cavalo-marinho, minha garotinha, onde a gente consolida o que estuda pra não esquecer!",
+        explanation: "O hipocampo é indispensável na conversão de memórias de curto prazo em memórias de longo prazo (consolidação). Lesões bilaterais causam amnésia anterógrada."
       },
       {
-        category: "CÓRTEX CEREBRAL",
-        question: "O Córtex Pré-Frontal (CPF) é a região cerebral mais nobre do ser humano, sendo o grande responsável por:",
+        topic: "Córtex Pré-Frontal",
+        question: "O Córtex Pré-Frontal (CPF) desempenha papel central em quais processos psicológicos humanos?",
         options: [
-          "Controle exclusivo dos reflexos pupilares e deglutição.",
-          "Funções executivas, tomada de decisões, planejamento futuro e modulação inibitória do comportamento.",
+          "Controle puramente reflexo da salivação e da tosse.",
+          "Funções executivas, tomada de decisão, planejamento e modulação inibitória do comportamento.",
           "Recepção dos estímulos olfatórios primários.",
-          "Produção e drenagem do líquido cefalorraquidiano (LCR)."
+          "Produção e filtração do líquido cefalorraquidiano."
         ],
         correct: 1,
-        explanation: "O Córtex Pré-Frontal orquestra o pensamento complexo: atenção seletiva, planejamento de metas, julgamento ético e regulação dos impulsos emocionais mais primitivos."
+        hint: "É a parte mais desenvolvida da sua cabeça brilhante, momo: planejar, tomar decisões e pensar no futuro!",
+        explanation: "O CPF coordena o raciocínio complexo, autocontrole, flexibilidade cognitiva e direcionamento de ações para metas de longo prazo."
       },
       {
-        category: "SISTEMA VISUAL",
-        question: "Para os olhões da minha Zoiuda enxergarem tudo com clareza: o Córtex Visual Primário (Área 17 de Brodmann ou V1) localiza-se em qual lobo cerebral?",
+        topic: "Sistema Visual",
+        question: "O Córtex Visual Primário (Área 17 de Brodmann ou V1) localiza-se anatomicamente em qual lobo cerebral?",
         options: [
           "Lobo Occipital (nas margens do sulco calcarino).",
           "Lobo Frontal (no giro pré-central).",
@@ -398,124 +359,158 @@
           "Lobo da Ínsula posterior."
         ],
         correct: 0,
-        explanation: "O lobo occipital é a central visual do cérebro. O córtex visual primário (V1) fica nas bordas do sulco calcarino e recebe a informação diretamente da retina via corpo geniculado lateral do tálamo."
+        hint: "Fica bem na parte de trás da cabeça, meu anjinho, responsável por processar tudo o que você enxerga.",
+        explanation: "O córtex visual primário fica no lobo occipital, em torno do sulco calcarino, recebendo as vias visuais oriundas da retina através do tálamo."
       },
       {
-        category: "NEUROBIOLOGIA DA MOTIVAÇÃO",
-        question: "A sensação de prazer, recompensa e motivação é mediada principalmente por qual via e neurotransmissor?",
+        topic: "Motivação & Recompensa",
+        question: "A via dopaminérgica mesolímbica, classicamente relacionada à motivação, recompensa e reforço comportamental, projeta-se:",
         options: [
-          "Via Colinérgica do Tálamo (Acetilcolina).",
-          "Via Dopaminérgica Mesolímbica (Dopamina projetando da Área Tegmentar Ventral para o Núcleo Accumbens).",
-          "Via Glutamatérgica do Tronco (Glutamato puro).",
-          "Via Noradrenérgica Cerebelar."
+          "Do Tálamo diretamente para o Bulbo espinhal.",
+          "Da Área Tegmentar Ventral (ATV) para o Núcleo Accumbens.",
+          "Do Córtex Motor para a Glândula Pineal.",
+          "Do Cerebelo para os Nervos Cranianos."
         ],
         correct: 1,
-        explanation: "A via dopaminérgica mesolímbica conecta a ATV ao Núcleo Accumbens e é a chave do reforço positivo, prazer e expectativa de recompensa (é ela que brilha quando você ganha um beijinho do Rafita!)."
+        hint: "É a via do prazer e da motivação, momo! É ela que ativa aquela sensação boa de dever cumprido quando você estuda.",
+        explanation: "A via mesolímbica conecta neurônios dopaminérgicos da ATV ao Núcleo Accumbens, constituindo o circuito central de recompensa e motivação."
       },
       {
-        category: "TRONCO ENCEFÁLICO",
-        question: "Quais são as três porções anatômicas que compõem o Tronco Encefálico (em ordem crânio-caudal) e qual sua função vital primária?",
+        topic: "Tronco Encefálico",
+        question: "Quais são as três estruturas anatômicas que formam o Tronco Encefálico (em sentido crânio-caudal)?",
         options: [
-          "Mesencéfalo, Ponte e Bulbo; controle de funções vitais autonômicas (respiração, frequência cardíaca e pressão arterial).",
-          "Telencéfalo, Diencéfalo e Cerebelo; controle da digestão e do sono REM.",
-          "Epitálamo, Hipotálamo e Tálamo; regulação de hormônios da tireoide.",
-          "Córtex, Fórnix e Trígono; produção de dopamina motora."
+          "Mesencéfalo, Ponte e Bulbo.",
+          "Telencéfalo, Diencéfalo e Cerebelo.",
+          "Epitálamo, Hipotálamo e Tálamo.",
+          "Córtex, Fórnix e Meninges."
         ],
         correct: 0,
-        explanation: "O tronco encefálico divide-se em Mesencéfalo, Ponte e Bulbo. Ali ficam os centros respiratórios e cardiovasculares autônomos, sem os quais a vida imediata não se sustenta."
+        hint: "Lembra da ordem de cima pra baixo, minha garotinha: Mesencéfalo em cima, Ponte no meio e Bulbo embaixo.",
+        explanation: "O tronco encefálico é composto por Mesencéfalo, Ponte e Bulbo (medula oblonga), contendo núcleos essenciais para respiração e controle cardiovascular."
       },
       {
-        category: "SINAPSE QUÍMICA",
-        question: "No terminal pré-sináptico, qual íon é o 'gatilho' fundamental para promover a exocitose das vesículas cheias de neurotransmissores na fenda sináptica?",
+        topic: "Sinapse Química",
+        question: "No botão terminal pré-sináptico, qual íon desencadeia diretamente a exocitose das vesículas de neurotransmissores?",
         options: [
-          "Influxo de Cálcio (Ca²⁺) através de canais de cálcio dependentes de voltagem.",
-          "Efluxo imediato de Magnésio (Mg²⁺).",
-          "Acúmulo estático de Glicose intracelular.",
-          "Saída de íons Bicarbonato."
+          "Influxo de Cálcio (Ca²⁺) por canais voltagem-dependentes.",
+          "Efluxo maciço de Magnésio (Mg²⁺).",
+          "Bloqueio permanente de íons Sódio.",
+          "Saída passiva de Glicose celular."
         ],
         correct: 0,
-        explanation: "Quando a onda de despolarização atinge o botão terminal, abrem-se os canais de Ca²⁺ voltagem-dependentes. O influxo de cálcio ativa as proteínas SNARE, fundindo as vesículas à membrana para liberar o neurotransmissor."
+        hint: "O cálcio é o mensageiro chave, meu anjinho: quando ele entra no botão terminal, as vesículas se fundem e liberam o conteúdo na fenda sináptica.",
+        explanation: "A despolarização abre canais de Ca²⁺ dependentes de voltagem. A entrada de cálcio ativa proteínas que fundem as vesículas à membrana pré-sináptica."
       },
       {
-        category: "SISTEMA NERVOSO AUTÔNOMO",
-        question: "Quando o agente Leon S. Kennedy entra em estado de estresse extremo em combate, qual divisão do SNA é acionada e que alterações fisiológicas são observadas?",
+        topic: "Sistema Autônomo",
+        question: "Em uma situação de estresse agudo e resposta de luta ou fuga, a divisão simpática do sistema autônomo promove:",
         options: [
-          "Divisão Parassimpática; broncoconstrição e diminuição dos batimentos cardíacos.",
-          "Divisão Simpática; midríase (dilatação das pupilas), taquicardia e broncodilatação.",
-          "Divisão Entérica exclusivamente; estagnação intestinal e miose acentuada.",
-          "Divisão Somática involuntária; sono imediato e relaxamento muscular."
+          "Constrição pupilar (miose) e bradicardia.",
+          "Dilatação pupilar (midríase), taquicardia e broncodilatação.",
+          "Aumento expressivo da motilidade gastrointestinal.",
+          "Sono profundo e relaxamento esfincteriano."
         ],
         correct: 1,
-        explanation: "O Sistema Simpático é a resposta tática de 'Luta ou Fuga': pupilas dilatam (midríase) para enxergar melhor, o coração dispara para irrigar músculos esqueléticos e os brônquios abrem para captar mais oxigênio."
+        hint: "Pensa no susto, momo: o coração dispara, a respiração abre e as pupilas dilatam para enxergar melhor o perigo!",
+        explanation: "O sistema nervoso simpático mobiliza energia para emergências: aumenta frequência cardíaca, dilata vias aéreas e dilata as pupilas."
       },
       {
-        category: "CÓRTEX SOMATOSSENSORIAL",
-        question: "O Homúnculo Sensorial de Penfield é a representação topográfica do corpo situada em qual região anatômica do córtex?",
+        topic: "Córtex Somatossensorial",
+        question: "O mapa somatotópico do corpo (Homúnculo de Penfield sensorial) localiza-se em qual giro cortical?",
         options: [
           "Giro Pós-Central (Lobo Parietal).",
           "Giro Pré-Central (Lobo Frontal).",
-          "Giro Temporal Superior.",
-          "Corpo Caloso anterior."
+          "Giro Temporal Médio.",
+          "Giro Cingulado Anterior."
         ],
         correct: 0,
-        explanation: "O córtex somatossensorial primário (S1) fica no giro pós-central do lobo parietal. Partes do corpo com maior densidade de receptores táteis (como lábios e mãos) ocupam áreas gigantescas no mapa do homúnculo!"
+        hint: "Fica logo atrás do sulco central, no lobo parietal, onde chega a sensibilidade do tato e da dor, minha garotinha.",
+        explanation: "O córtex somatossensorial primário (S1) situa-se no giro pós-central do lobo parietal e organiza a percepção tátil de todo o corpo."
       },
       {
-        category: "LINGUAGEM & NEUROPSICOLOGIA",
-        question: "Uma lesão na Área de Broca (Giro Frontal Inferior esquerdo) gera classicamente um quadro de:",
+        topic: "Linguagem",
+        question: "A lesão na Área de Broca (Giro Frontal Inferior do hemisfério dominante) manifesta-se clinicamente como:",
         options: [
-          "Afasia motora (não fluente): grande dificuldade na articulação e expressão da fala, embora a compreensão esteja preservada.",
-          "Afasia de Wernicke (sensorial fluente): fala fluida com palavras sem sentido e perda profunda da compreensão.",
-          "Cegueira cortical unilateral sem alteração da linguagem.",
-          "Perda completa e irrevogável do paladar."
+          "Afasia motora (não fluente): dificuldade severa de emissão e articulação da fala, com compreensão relativamente preservada.",
+          "Afasia fluente com fala sem sentido e perda de compreensão (Afasia de Wernicke).",
+          "Surdez central sem alteração motora.",
+          "Incapacidade total de reconhecer rostos familiares."
         ],
         correct: 0,
-        explanation: "A Área de Broca (áreas 44 e 45 de Brodmann no hemisfério dominante) é responsável pela programação motora da fala. A pessoa entende o que ouve, mas tem imensa dificuldade motora para expressar as palavras."
+        hint: "Na afasia de Broca a pessoa entende tudo, momo, mas tem uma trava motora para conseguir falar as palavras.",
+        explanation: "A Área de Broca programa a coordenação motora necessária para verbalizar. Na sua lesão, a fala torna-se telegráfica e trabalhosa, mas o paciente compreende."
       },
       {
-        category: "NEUROBIOLOGIA CELULAR",
-        question: "Qual é a função da bainha de mielina nos axônios e quais células a produzem no Sistema Nervoso Central (SNC) e Periférico (SNP), respectivamente?",
+        topic: "Bainha de Mielina",
+        question: "A bainha de mielina acelera a condução dos impulsos nervosos e é sintetizada no SNC e no SNP por:",
         options: [
-          "Aumentar a velocidade de condução via propagação saltatória; Oligodendrócitos (SNC) e Células de Schwann (SNP).",
-          "Diminuir a velocidade dos impulsos para poupar energia; Micróglia (SNC) e Astrócitos (SNP).",
-          "Servir unicamente como depósito de glicose; Células Ependimárias (SNC) e Neurônios pseudounipolares (SNP).",
-          "Proteger contra calor excessivo; Macrófagos (SNC) e Células Satélites (SNP)."
+          "Oligodendrócitos (SNC) e Células de Schwann (SNP).",
+          "Astrócitos (SNC) e Micróglia (SNP).",
+          "Células Ependimárias (SNC) e Fibroblastos (SNP).",
+          "Neurônios Bipolares (SNC) e Células Satélites (SNP)."
         ],
         correct: 0,
-        explanation: "A mielina atua como isolante elétrico nos axônios, fazendo o impulso 'saltar' pelos Nós de Ranvier (condução saltatória ultrarrápida). No SNC é produzida pelos oligodendrócitos e no SNP pelas células de Schwann."
+        hint: "Lembra do parzinho, meu anjinho: Oligodendrócito no cérebro/medula (SNC) e Schwann nos nervos do corpo (SNP).",
+        explanation: "A mielina permite a condução saltatória nos nós de Ranvier. É produzida por oligodendrócitos no Sistema Nervoso Central e células de Schwann no Periférico."
       },
       {
-        category: "PROTEÇÃO DO SNC",
-        question: "A Barreira Hematoencefálica (BHE), essencial para proteger o encéfalo de toxinas e patógenos, é formada principalmente por:",
+        topic: "Barreira Hematoencefálica",
+        question: "A Barreira Hematoencefálica (BHE), essencial para proteger o tecido neural de flutuações e toxinas no sangue, é formada por:",
         options: [
-          "Junções de oclusão (tight junctions) entre células endoteliais dos capilares cerebrais, apoiadas pelos pés dos astrócitos.",
-          "Uma camada espessa de colágeno produzida pelos neurônios piramidais.",
-          "Pelo próprio líquido cefalorraquidiano condensado.",
-          "Pelas meninges Pia-Máter e Dura-Máter fundidas no córtex."
+          "Células endoteliais com junções oclusivas (tight junctions) circundadas pelos prolongamentos dos astrócitos.",
+          "Camadas densas de colágeno secretadas pelos axônios mielinizados.",
+          "Pelo próprio tecido das meninges fundido aos ventrículos.",
+          "Uma rede exclusiva de neurônios motores inibitórios."
         ],
         correct: 0,
-        explanation: "A BHE é uma barreira seletiva de alta precisão: as células endoteliais dos vasos são coladas por junções estreitas (tight junctions) e circundadas pelos pés vasculares dos astrócitos, impedindo a passagem indiscriminada de substâncias."
+        hint: "É o escudo protetor do cérebro, momo: vasos seladinhos e os pezinhos dos astrócitos abraçando os capilares.",
+        explanation: "As junções oclusivas estreitas entre as células endoteliais dos capilares cerebrais, com apoio dos astrócitos, limitam rigidamente o que passa do sangue para o parênquima."
       },
       {
-        category: "SISTEMA MOTOR",
-        question: "Qual estrutura encefálica é a grande maestrina da coordenação motora fina, equilíbrio, cálculo de erros motores e manutenção do tônus muscular?",
+        topic: "Cerebelo",
+        question: "Qual estrutura do encéfalo é a principal responsável pelo refinamento motor, equilíbrio postural e aprendizado de habilidades motoras?",
         options: [
           "Cerebelo.",
           "Hipotálamo.",
-          "Glândula Pineal.",
-          "Hipocampo ventral."
+          "Corpo Amigdalóide.",
+          "Lobo Temporal Superior."
         ],
         correct: 0,
-        explanation: "O cerebelo compara a intenção motora do córtex com o movimento real executado pelo corpo, aplicando correções milimétricas em tempo real para suavidade, precisão e equilíbrio postural."
+        hint: "Fica na parte inferior e posterior do encéfalo, minha garotinha, comparando o que você quis fazer com o movimento real pra corrigir na hora!",
+        explanation: "O cerebelo coordena movimentos suaves e precisos, ajusta o tônus muscular para o equilíbrio e participa do aprendizado motor procedural."
+      }
+    ];
+
+    // Recadinhos fofos e autênticos do Rafael para a Sabrina
+    const notes = [
+      {
+        text: "Oi momo... Passando pra te lembrar de respirar fundo e não se cobrar tanto.\n\nVocê é muito inteligente, minha garotinha. Essa matéria é puxada, mas você tem capacidade de sobra. Vai no seu ritmo que eu tenho certeza de que você vai se sair muito bem! Tô sempre torcendo por você. ❤️",
+        author: "Rafa ❤️"
+      },
+      {
+        text: "Dica do Rafa, meu anjinho: não tente decorar tudo de uma vez.\n\nEntende o sentido de cada coisa: o que acelera, o que freia, pra onde vai o estímulo. Você pega as coisas muito rápido, momo! Toma uma água e confia no que você estudou. Te amo muito! ❤️",
+        author: "Rafa ❤️"
+      },
+      {
+        text: "Passando pra te dar um abraço de longe, minha garotinha!\n\nSe o Leon enfrentou Raccoon City inteira e deu conta, você tira de letra essa provinha de neuro com essa dedicação linda que você tem. Tenho muito orgulho de você, momo! ❤️",
+        author: "Rafa • Leon aprova 😉"
+      },
+      {
+        text: "Sabia que a dopamina da motivação é liberada nas pequenas vitórias, meu anjinho?\n\nCada questão que você acerta aqui é um passinho a mais. Não fica nervosa com os nomes difíceis, você é brilhante e muito dedicada. No final de semana eu te vejo e te dou um beijo de parabéns pessoalmente! ❤️",
+        author: "Rafa ❤️"
+      },
+      {
+        text: "Oi momo! Fiz esse site com o maior carinho do mundo pra você conseguir estudar com calma no celular.\n\nEspero de verdade que te ajude a fixar essa matéria. Você é uma garota muito especial pra mim, meu anjinho. Foco no objetivo que a nota boa já é sua! ❤️",
+        author: "Rafa ❤️"
       }
     ];
 
     let currentIdx = 0;
     let score = 0;
-    let userAnswers = [];
+    let currentNoteIdx = 0;
 
-    // DOM Elements
-    const questionCategory = document.getElementById('questionCategory');
+    // Elementos DOM
+    const questionTopic = document.getElementById('questionTopic');
     const questionText = document.getElementById('questionText');
     const optionsContainer = document.getElementById('optionsContainer');
     const feedbackBox = document.getElementById('feedbackBox');
@@ -523,62 +518,72 @@
     const feedbackTitle = document.getElementById('feedbackTitle');
     const feedbackText = document.getElementById('feedbackText');
     const btnNext = document.getElementById('btnNext');
-    const currentQNum = document.getElementById('currentQNum');
+    const progressText = document.getElementById('progressText');
     const progressBar = document.getElementById('progressBar');
-    const scoreCount = document.getElementById('scoreCount');
-    const statusCondition = document.getElementById('statusCondition');
+    const scoreCounter = document.getElementById('scoreCounter');
+    const hintBox = document.getElementById('hintBox');
+    const hintContent = document.getElementById('hintContent');
+    const btnQuestionHint = document.getElementById('btnQuestionHint');
     const quizContainer = document.getElementById('quizContainer');
     const resultsScreen = document.getElementById('resultsScreen');
-    const btnSoundToggle = document.getElementById('btnSoundToggle');
-    const soundIcon = document.getElementById('soundIcon');
 
-    // Sound toggle
-    btnSoundToggle.addEventListener('click', () => {
-      sfx.enabled = !sfx.enabled;
-      if (sfx.enabled) {
-        soundIcon.className = "fa-solid fa-volume-high text-pink-400";
-        sfx.click();
-      } else {
-        soundIcon.className = "fa-solid fa-volume-xmark text-slate-500";
-      }
+    // Elementos do Modal
+    const noteModal = document.getElementById('noteModal');
+    const btnOpenNote = document.getElementById('btnOpenNote');
+    const btnCloseNote = document.getElementById('btnCloseNote');
+    const btnConfirmNote = document.getElementById('btnConfirmNote');
+    const btnNextNote = document.getElementById('btnNextNote');
+    const noteContent = document.getElementById('noteContent');
+    const noteAuthor = document.getElementById('noteAuthor');
+
+    // Dica da questão atual
+    btnQuestionHint.addEventListener('click', () => {
+      const q = questions[currentIdx];
+      hintContent.textContent = q.hint;
+      hintBox.classList.toggle('hidden');
     });
 
-    function updateHUD() {
-      currentQNum.textContent = currentIdx + 1;
-      const pct = ((currentIdx + 1) / questions.length) * 100;
-      progressBar.style.width = pct + "%";
-      scoreCount.textContent = score;
-
-      const currentScorePct = currentIdx === 0 ? 100 : (score / (currentIdx + 1)) * 100;
-      if (currentScorePct >= 80) {
-        statusCondition.textContent = "FINE";
-        statusCondition.className = "text-emerald-400 font-bold";
-      } else if (currentScorePct >= 60) {
-        statusCondition.textContent = "CAUTION";
-        statusCondition.className = "text-amber-400 font-bold";
-      } else {
-        statusCondition.textContent = "DANGER";
-        statusCondition.className = "text-rose-500 font-bold";
-      }
+    // Modal de Recadinhos
+    function showNote(idx) {
+      const n = notes[idx % notes.length];
+      noteContent.textContent = n.text;
+      noteAuthor.textContent = n.author;
     }
 
+    btnOpenNote.addEventListener('click', () => {
+      showNote(currentNoteIdx);
+      noteModal.classList.remove('hidden');
+    });
+
+    btnCloseNote.addEventListener('click', () => noteModal.classList.add('hidden'));
+    btnConfirmNote.addEventListener('click', () => noteModal.classList.add('hidden'));
+
+    btnNextNote.addEventListener('click', () => {
+      currentNoteIdx++;
+      showNote(currentNoteIdx);
+    });
+
+    // Renderizar Questão
     function renderQuestion() {
       const q = questions[currentIdx];
-      updateHUD();
+      progressText.textContent = `Questão ${currentIdx + 1} de ${questions.length}`;
+      progressBar.style.width = `${((currentIdx + 1) / questions.length) * 100}%`;
+      scoreCounter.textContent = score;
 
-      questionCategory.textContent = q.category;
+      questionTopic.textContent = q.topic;
       questionText.textContent = q.question;
 
+      hintBox.classList.add('hidden');
       feedbackBox.classList.add('hidden');
       btnNext.disabled = true;
-      btnNext.className = "px-5 py-2.5 rounded-xl bg-slate-800 text-slate-500 font-bold text-sm flex items-center gap-2 transition-all cursor-not-allowed";
+      btnNext.className = "px-6 py-2.5 rounded-2xl bg-slate-200 text-slate-400 font-bold text-sm flex items-center space-x-2 transition-all cursor-not-allowed";
 
       optionsContainer.innerHTML = '';
       q.options.forEach((opt, idx) => {
         const btn = document.createElement('button');
-        btn.className = "w-full text-left p-4 rounded-xl bg-[#171E2B] hover:bg-[#1E2638] border border-slate-700/80 hover:border-pink-500/60 text-slate-200 text-sm md:text-base font-medium transition-all flex items-start gap-3 group";
+        btn.className = "w-full text-left p-4 rounded-2xl bg-roseSoft-50/60 hover:bg-roseSoft-100/80 border border-roseSoft-200 text-slate-700 text-sm md:text-base font-normal transition-all flex items-start space-x-3 group";
         btn.innerHTML = `
-          <span class="w-6 h-6 rounded-lg bg-slate-800 border border-slate-600 flex items-center justify-center text-xs font-bold font-pixel text-pink-400 shrink-0 group-hover:border-pink-500">
+          <span class="w-6 h-6 rounded-full bg-white border border-roseSoft-300 flex items-center justify-center text-xs font-bold text-roseSoft-600 shrink-0 group-hover:border-roseSoft-500">
             ${String.fromCharCode(65 + idx)}
           </span>
           <span class="flex-1">${opt}</span>
@@ -594,48 +599,37 @@
       buttons.forEach(b => b.disabled = true);
 
       const isCorrect = selectedIdx === q.correct;
-      userAnswers.push({ qIdx: currentIdx, chosen: selectedIdx, isCorrect });
-
       if (isCorrect) {
         score++;
-        sfx.correct();
-        buttons[selectedIdx].classList.remove('bg-[#171E2B]', 'border-slate-700/80');
-        buttons[selectedIdx].classList.add('bg-emerald-950/70', 'border-emerald-500', 'text-emerald-100', 'shadow-md', 'shadow-emerald-500/20');
+        buttons[selectedIdx].className = "w-full text-left p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-500 text-emerald-900 text-sm md:text-base font-medium flex items-start space-x-3";
         
-        feedbackBox.className = "rounded-xl p-4 mb-5 border bg-emerald-950/50 border-emerald-500/40 text-emerald-200 animate-fade-in";
-        feedbackIcon.className = "w-8 h-8 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center text-sm font-bold shrink-0 mt-0.5";
+        feedbackBox.className = "rounded-2xl p-4 mb-5 border bg-emerald-50 border-emerald-300 text-emerald-900";
+        feedbackIcon.className = "w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5";
         feedbackIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
-        feedbackTitle.textContent = "Exato, meu amor! Mandou muito bem! 💖";
+        feedbackTitle.textContent = "Muito bem, momo! Resposta certinha.";
       } else {
-        sfx.wrong();
-        buttons[selectedIdx].classList.remove('bg-[#171E2B]', 'border-slate-700/80');
-        buttons[selectedIdx].classList.add('bg-rose-950/70', 'border-rose-500', 'text-rose-100');
-        
-        // Highlight correct one
-        buttons[q.correct].classList.remove('bg-[#171E2B]', 'border-slate-700/80');
-        buttons[q.correct].classList.add('bg-emerald-950/70', 'border-emerald-500', 'text-emerald-200');
+        buttons[selectedIdx].className = "w-full text-left p-4 rounded-2xl bg-rose-50 border-2 border-rose-400 text-rose-900 text-sm md:text-base font-medium flex items-start space-x-3";
+        buttons[q.correct].className = "w-full text-left p-4 rounded-2xl bg-emerald-50 border-2 border-emerald-500 text-emerald-900 text-sm md:text-base font-medium flex items-start space-x-3";
 
-        feedbackBox.className = "rounded-xl p-4 mb-5 border bg-rose-950/50 border-rose-500/40 text-rose-200 animate-fade-in";
-        feedbackIcon.className = "w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5";
+        feedbackBox.className = "rounded-2xl p-4 mb-5 border bg-roseSoft-50 border-roseSoft-300 text-slate-800";
+        feedbackIcon.className = "w-7 h-7 rounded-full bg-roseSoft-500 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5";
         feedbackIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        feedbackTitle.textContent = "Quase, meu anjinho! Mas veja o conceito chave:";
+        feedbackTitle.textContent = "Quase, meu anjinho! Veja a explicação:";
       }
 
       feedbackText.textContent = q.explanation;
       feedbackBox.classList.remove('hidden');
-
-      scoreCount.textContent = score;
+      scoreCounter.textContent = score;
 
       btnNext.disabled = false;
-      btnNext.className = "px-6 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold text-sm flex items-center gap-2 shadow-lg shadow-pink-500/30 transition-all transform hover:scale-105";
+      btnNext.className = "px-6 py-2.5 rounded-2xl bg-roseSoft-600 hover:bg-roseSoft-700 text-white font-bold text-sm flex items-center space-x-2 shadow-sm transition-all";
       
       if (currentIdx === questions.length - 1) {
-        btnNext.innerHTML = '<span>Ver Resultado Final</span> <i class="fa-solid fa-trophy"></i>';
+        btnNext.innerHTML = '<span>Ver resultado</span> <i class="fa-solid fa-chevron-right text-xs"></i>';
       }
     }
 
     btnNext.addEventListener('click', () => {
-      sfx.click();
       if (currentIdx < questions.length - 1) {
         currentIdx++;
         renderQuestion();
@@ -650,51 +644,32 @@
 
       const pct = Math.round((score / questions.length) * 100);
       document.getElementById('finalScore').textContent = score;
-      document.getElementById('finalPct').textContent = pct + "%";
-
-      const rankBadge = document.getElementById('rankBadge');
-      const resultTitle = document.getElementById('resultTitle');
-      const resultSubtitle = document.getElementById('resultSubtitle');
-      const secretLetterBox = document.getElementById('secretLetterBox');
+      document.getElementById('finalPercentage').textContent = pct + "%";
 
       if (pct >= 80) {
-        // WINNER! 80%+
-        sfx.victory();
         confetti({
-          particleCount: 120,
-          spread: 80,
-          origin: { y: 0.6 }
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#F43F6E', '#FFCCD6', '#FFA3B5']
         });
-
-        rankBadge.className = "inline-block px-4 py-1 rounded-full font-pixel text-xs font-bold tracking-widest uppercase mb-3 bg-emerald-950 border border-emerald-400 text-emerald-300 shadow-md shadow-emerald-500/20";
-        rankBadge.innerHTML = "⭐ RANK SSS • AGENTE ESPECIAL & RAINHA DO RAFITA ⭐";
-        
-        resultTitle.textContent = "Você Brilhou Demais, Meu Anjinho! 👑";
-        secretLetterBox.classList.remove('hidden');
+        document.getElementById('resultTitle').textContent = "Você arrasou, momo!";
+        document.getElementById('resultBadge').textContent = "Meta Atingida com Sucesso";
       } else {
-        // Less than 80%
-        rankBadge.className = "inline-block px-4 py-1 rounded-full font-pixel text-xs font-bold tracking-widest uppercase mb-3 bg-amber-950 border border-amber-400 text-amber-300";
-        rankBadge.innerHTML = "RANK A • SOBREVIVENTE EM TREINAMENTO 🌿";
-        
-        resultTitle.textContent = "Bom trabalho, minha princesa!";
-        secretLetterBox.classList.remove('hidden'); // We still show the letter with warm encouragement!
+        document.getElementById('resultTitle').textContent = "Bom treino, minha garotinha!";
+        document.getElementById('resultBadge').textContent = "Treino Concluído";
       }
     }
 
     document.getElementById('btnRestart').addEventListener('click', () => {
       currentIdx = 0;
       score = 0;
-      userAnswers = [];
       resultsScreen.classList.add('hidden');
       quizContainer.classList.remove('hidden');
       renderQuestion();
     });
 
-    document.getElementById('btnReviewQuestions').addEventListener('click', () => {
-      alert("Dica do Rafita: Você pode refazer o teste para fixar todos os conceitos de potencial de ação, sinapses e lobos cerebrais! Cada erro é um degrau rumo ao 10 na faculdade! ❤️");
-    });
-
-    // Start
+    // Iniciar
     renderQuestion();
   </script>
 </body>
