@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabrina • Neuroanatomia & Neurofisiologia</title>
+  <title>Para o Meu Momo • Neuroanatomia & Neurofisiologia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <div class="w-10 h-10 rounded-2xl bg-roseSoft-100 border border-roseSoft-300 flex items-center justify-center text-roseSoft-600 shadow-sm font-serif text-lg font-bold">
-          S
+          <i class="fa-solid fa-heart text-sm"></i>
         </div>
         <div>
           <span class="text-[11px] font-bold uppercase tracking-wider text-roseSoft-500 block">Psicologia & Estudos</span>
@@ -88,15 +88,15 @@
         <div class="w-full md:w-7/12 space-y-2.5 text-left">
           <div class="inline-flex items-center space-x-2 bg-roseSoft-100/80 border border-roseSoft-200 px-3 py-1 rounded-full text-xs font-semibold text-roseSoft-700">
             <i class="fa-solid fa-heart text-roseSoft-500 text-[10px]"></i>
-            <span>Feito com carinho para a Sabrina</span>
+            <span>Feito com amor para o meu neném</span>
           </div>
 
           <h2 class="text-xl md:text-2xl font-bold font-serif text-slate-900 leading-snug">
-            Oi Sabrina! Vamos revisar para a prova?
+            Oi momo! Vamos revisar para a prova?
           </h2>
 
           <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
-            Montei esse simulado com as 15 questões fundamentais de neuroanatomia e neurofisiologia para te ajudar nos estudos de psicologia. Você pode treinar no seu tempo, no celular ou no computador. Se bater dúvida em alguma pergunta, deixei um botão de ajuda com dicas especiais para você.
+            Montei esse simulado com as 15 questões fundamentais de neuroanatomia e neurofisiologia para te ajudar nos estudos de psicologia. Assim minha garotinha, não é o melhor site do mundo mas fiz com amor para você meu momo, espero que isso te ajude realmente!! amo oce mo
           </p>
 
           <p class="text-xs text-roseSoft-700 font-medium">
@@ -183,8 +183,8 @@
     <!-- TELA FINAL DE RESULTADO -->
     <div id="resultsScreen" class="hidden bg-white border border-roseSoft-200 rounded-3xl p-6 md:p-8 card-shadow text-center">
       
-      <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-roseSoft-100 text-roseSoft-600 flex items-center justify-center text-2xl shadow-inner">
-        <i class="fa-solid fa-award"></i>
+      <div id="resultIconContainer" class="w-16 h-16 mx-auto mb-3 rounded-full bg-roseSoft-100 text-roseSoft-600 flex items-center justify-center text-2xl shadow-inner">
+        <i id="resultIcon" class="fa-solid fa-award"></i>
       </div>
 
       <span id="resultBadge" class="inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-2 bg-roseSoft-100 text-roseSoft-700">
@@ -199,29 +199,14 @@
         Você acertou <span class="text-roseSoft-600 font-bold" id="finalScore">0</span> de 15 questões (<span class="text-roseSoft-600 font-bold" id="finalPercentage">0%</span>).
       </p>
 
-      <!-- Carta Especial do Rafael -->
+      <!-- Carta Especial do Rafael (Conteúdo dinâmico dependendo se atingiu ou não 80%) -->
       <div id="letterBox" class="text-left bg-roseSoft-50 border border-roseSoft-200 rounded-2xl p-5 md:p-7 mb-6">
         <div class="flex items-center space-x-2 mb-3 text-roseSoft-600 text-xs font-bold">
-          <i class="fa-solid fa-envelope-open-heart"></i>
-          <span>De: Rafael • Para: Sabrina</span>
+          <i class="fa-solid fa-heart"></i>
+          <span id="letterHeader">De: Rafael • Para: Meu Momo ❤️</span>
         </div>
-        <div class="space-y-3 text-xs md:text-sm text-slate-700 leading-relaxed font-normal">
-          <p>
-            Oi, <strong class="text-roseSoft-700 font-semibold">momo</strong>... Passando aqui para te dar os parabéns pela dedicação!
-          </p>
-          <p>
-            Eu sei o quanto você se esforça para dar conta de tudo e como essa matéria de neuroanatomia e neurofisiologia tem detalhes, nomes e processos difíceis. Mas você mostrou que tem total capacidade de dominar esse conteúdo, <strong class="text-roseSoft-700 font-semibold">minha garotinha</strong>.
-          </p>
-          <p>
-            Assim como o Leon enfrenta qualquer desafio em Resident Evil sem recuar, você encara os estudos com essa determinação linda e esse jeitinho doce que eu amo tanto. Você é muito inteligente, <strong class="text-roseSoft-700 font-semibold">meu anjinho</strong>, e eu tenho um orgulho imenso de você.
-          </p>
-          <p>
-            Vai tranquila para a prova, respira fundo e confia no que você sabe. No final de semana a gente comemora juntos!
-          </p>
-          <div class="pt-3 border-t border-roseSoft-200 text-xs text-roseSoft-600 font-semibold flex justify-between items-center">
-            <span>Com todo o carinho do seu Rafa ❤️</span>
-            <span>Psicologia &bull; Nota 10</span>
-          </div>
+        <div id="letterBody" class="space-y-3 text-xs md:text-sm text-slate-700 leading-relaxed font-normal">
+          <!-- Injetado dinamicamente -->
         </div>
       </div>
 
@@ -229,7 +214,7 @@
       <div class="flex items-center justify-center">
         <button id="btnRestart" class="px-6 py-3 rounded-2xl bg-roseSoft-600 hover:bg-roseSoft-700 text-white font-bold text-sm shadow-md transition-all flex items-center space-x-2">
           <i class="fa-solid fa-rotate-left text-xs"></i>
-          <span>Refazer Simulado</span>
+          <span id="btnRestartText">Refazer Simulado</span>
         </button>
       </div>
 
@@ -250,7 +235,7 @@
           <i class="fa-solid fa-heart"></i>
         </div>
         <h3 class="text-lg font-bold font-serif text-slate-800">
-          De: Rafael &bull; Para: Sabrina
+          De: Rafael &bull; Para: Minha Princesinha
         </h3>
         <p class="text-xs text-roseSoft-600 font-medium mt-0.5">
           Um recadinho para te dar força nos estudos
@@ -333,7 +318,7 @@
           "Fissura Calcarina."
         ],
         correct: 0,
-        hint: "É aquela estrutura em formato de cavalo-marinho, minha garotinha, onde a gente consolida o que estuda pra não esquecer!",
+        hint: "É aquela estrutura em formato de cavalo-marinho, meu neném, onde a gente consolida o que estuda pra não esquecer!",
         explanation: "O hipocampo é indispensável na conversão de memórias de curto prazo em memórias de longo prazo (consolidação). Lesões bilaterais causam amnésia anterógrada."
       },
       {
@@ -346,7 +331,7 @@
           "Produção e filtração do líquido cefalorraquidiano."
         ],
         correct: 1,
-        hint: "É a parte mais desenvolvida da sua cabeça brilhante, momo: planejar, tomar decisões e pensar no futuro!",
+        hint: "É a parte mais desenvolvida da sua cabeça brilhante, princesinha: planejar, tomar decisões e pensar no futuro!",
         explanation: "O CPF coordena o raciocínio complexo, autocontrole, flexibilidade cognitiva e direcionamento de ações para metas de longo prazo."
       },
       {
@@ -411,7 +396,7 @@
           "Sono profundo e relaxamento esfincteriano."
         ],
         correct: 1,
-        hint: "Pensa no susto, momo: o coração dispara, a respiração abre e as pupilas dilatam para enxergar melhor o perigo!",
+        hint: "Pensa no susto, meu neném: o coração dispara, a respiração abre e as pupilas dilatam para enxergar melhor!",
         explanation: "O sistema nervoso simpático mobiliza energia para emergências: aumenta frequência cardíaca, dilata vias aéreas e dilata as pupilas."
       },
       {
@@ -476,12 +461,12 @@
           "Lobo Temporal Superior."
         ],
         correct: 0,
-        hint: "Fica na parte inferior e posterior do encéfalo, minha garotinha, comparando o que você quis fazer com o movimento real pra corrigir na hora!",
+        hint: "Fica na parte inferior e posterior do encéfalo, princesinha, comparando o que você quis fazer com o movimento real pra corrigir na hora!",
         explanation: "O cerebelo coordena movimentos suaves e precisos, ajusta o tônus muscular para o equilíbrio e participa do aprendizado motor procedural."
       }
     ];
 
-    // Recadinhos fofos e autênticos do Rafael para a Sabrina
+    // Recadinhos fofos e autênticos do Rafael
     const notes = [
       {
         text: "Oi momo... Passando pra te lembrar de respirar fundo e não se cobrar tanto.\n\nVocê é muito inteligente, minha garotinha. Essa matéria é puxada, mas você tem capacidade de sobra. Vai no seu ritmo que eu tenho certeza de que você vai se sair muito bem! Tô sempre torcendo por você. ❤️",
@@ -500,7 +485,7 @@
         author: "Rafa ❤️"
       },
       {
-        text: "Oi momo! Fiz esse site com o maior carinho do mundo pra você conseguir estudar com calma no celular.\n\nEspero de verdade que te ajude a fixar essa matéria. Você é uma garota muito especial pra mim, meu anjinho. Foco no objetivo que a nota boa já é sua! ❤️",
+        text: "Oi momo! Fiz esse site com o maior carinho do mundo pra você conseguir estudar com calma no celular.\n\nEspero de verdade que te ajude a fixar essa matéria. Você é uma garota muito especial pra mim, minha princesinha. Foco no objetivo que a nota boa já é sua! ❤️",
         author: "Rafa ❤️"
       }
     ];
@@ -646,18 +631,77 @@
       document.getElementById('finalScore').textContent = score;
       document.getElementById('finalPercentage').textContent = pct + "%";
 
+      const letterBody = document.getElementById('letterBody');
+      const letterHeader = document.getElementById('letterHeader');
+      const resultTitle = document.getElementById('resultTitle');
+      const resultBadge = document.getElementById('resultBadge');
+      const resultIcon = document.getElementById('resultIcon');
+      const resultIconContainer = document.getElementById('resultIconContainer');
+      const btnRestartText = document.getElementById('btnRestartText');
+
       if (pct >= 80) {
+        // CASCATA DE CORAÇÕES & CONFETES
         confetti({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
           colors: ['#F43F6E', '#FFCCD6', '#FFA3B5']
         });
-        document.getElementById('resultTitle').textContent = "Você arrasou, momo!";
-        document.getElementById('resultBadge').textContent = "Meta Atingida com Sucesso";
+
+        resultIcon.className = "fa-solid fa-trophy";
+        resultIconContainer.className = "w-16 h-16 mx-auto mb-3 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shadow-inner";
+        resultBadge.className = "inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-2 bg-emerald-100 text-emerald-700";
+        resultBadge.textContent = "Meta Concluída com Sucesso! (80%+)";
+        resultTitle.textContent = "Você foi maravilhosa, meu neném!";
+        btnRestartText.textContent = "Fazer Simulado Novamente";
+
+        letterHeader.textContent = "De: Rafael • Para: Meu Momo ❤️";
+        letterBody.innerHTML = `
+          <p>
+            Oi, <strong class="text-roseSoft-700 font-semibold">momo</strong>... Olha esse resultado incrível!
+          </p>
+          <p>
+            Eu tinha certeza absoluta de que você ia destruir nesse simulado, <strong class="text-roseSoft-700 font-semibold">minha garotinha</strong>. Você é muito inteligente, dedicada e tem um futuro brilhante pela frente na Psicologia. Essa matéria de neuro tem nomes compridos, vias neurais complexas e muito detalhe, mas você mostrou que domina tudo.
+          </p>
+          <p>
+            Assim como o Leon enfrenta qualquer desafio em Resident Evil sem hesitar, você encara os estudos com essa determinação e essa cabecinha genial que me deixa super orgulhoso. Você é incrível, <strong class="text-roseSoft-700 font-semibold">meu anjinho</strong>!
+          </p>
+          <p>
+            Vai com calma para a prova, respira fundo e confia no que você sabe, porque a nota boa já é sua. No final de semana a gente comemora com muitos beijos e carinho!
+          </p>
+          <div class="pt-3 border-t border-roseSoft-200 text-xs text-roseSoft-600 font-semibold flex justify-between items-center">
+            <span>Com todo o amor do seu Rafa ❤️</span>
+            <span>Orgulho do meu neném ✨</span>
+          </div>
+        `;
       } else {
-        document.getElementById('resultTitle').textContent = "Bom treino, minha garotinha!";
-        document.getElementById('resultBadge').textContent = "Treino Concluído";
+        // ABAIXO DE 80% - ACOLHIMENTO E CARINHO TOTAL
+        resultIcon.className = "fa-solid fa-heart";
+        resultIconContainer.className = "w-16 h-16 mx-auto mb-3 rounded-full bg-roseSoft-100 text-roseSoft-600 flex items-center justify-center text-2xl shadow-inner";
+        resultBadge.className = "inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase mb-2 bg-roseSoft-100 text-roseSoft-700";
+        resultBadge.textContent = "Etapa de Treino Concluída";
+        resultTitle.textContent = "Bom treino, meu anjinho!";
+        btnRestartText.textContent = "Tentar de Novo para Bater a Meta (80%)";
+
+        letterHeader.textContent = "De: Rafael • Para: Minha Garotinha ❤️";
+        letterBody.innerHTML = `
+          <p>
+            Oi, <strong class="text-roseSoft-700 font-semibold">momo</strong>... Não fica triste ou desanimada nem por um segundo, viu?
+          </p>
+          <p>
+            Neuroanatomia é uma matéria cheia de pegadinhas e conceitos que a gente só fixa praticando. Errar aqui no simulado é a melhor coisa que tem, porque assim você não erra nada na hora da prova de verdade, <strong class="text-roseSoft-700 font-semibold">meu neném</strong>!
+          </p>
+          <p>
+            Você já foi muito bem só de parar para estudar e se dedicar assim. Toma uma aguinha, dá uma olhada nas explicações das questões que você teve dúvida e, se quiser, clica no botão abaixo para tentar de novo e bater a meta de 80%.
+          </p>
+          <p>
+            Eu tenho um orgulho imenso de você e confio demais no seu potencial, <strong class="text-roseSoft-700 font-semibold">princesinha</strong>. Você vai arrasar nessa prova!
+          </p>
+          <div class="pt-3 border-t border-roseSoft-200 text-xs text-roseSoft-600 font-semibold flex justify-between items-center">
+            <span>Tô sempre aqui com você &bull; Rafa ❤️</span>
+            <span>Você consegue, meu anjinho!</span>
+          </div>
+        `;
       }
     }
 
